@@ -5,11 +5,6 @@ This repository contains custom implementations of basic Unix utilities written 
 
 ---
 
-
-# Unix Utilities
-
-A collection of custom Unix-like command line utilities implemented in C.
-
 ## Utilities Included
 
 - `cp`: Copy files
