@@ -5,47 +5,162 @@ This repository contains custom implementations of basic Unix utilities written 
 
 ---
 
-## 📂 mypwd
 
-```c
-// Compile:
-gcc mypwd.c -o mypwd
+# Unix Utilities
 
-// Run:
-$ ./mypwd
-/home/user/projects/unix-utils
+A collection of custom Unix-like command line utilities implemented in C.
 
-## 📂 mycp
-// Compile:
-gcc mycp.c -o mycp
+## Utilities Included
 
-// Run:
-$ cat file1.txt
-Hello from the original file!
+- `cp`: Copy files
+- `mv`: Move (rename) files
+- `myecho`: Echo arguments to standard output
+- `mypwd`: Print the current working directory
 
-$ ./mycp file1.txt file2.txt
+---
 
-$ cat file2.txt
-Hello from the original file!
+## cp
 
-## 📂 mymv
-// Compile:
-gcc mymv.c -o mymv
+`cp` is a utility to copy the contents of one file to another.
 
-// Run:
-$ ls
+### Compilation
+
+```bash
+gcc -o mycp mycp.c
+```
+
+### Usage
+
+```bash
+./mycp source.txt target.txt
+```
+
+### Example
+
+If `source.txt` contains:
+
+```
+Hello, Unix World!
+```
+
+Then after running the command:
+
+```bash
+./mycp source.txt copy.txt
+```
+
+`copy.txt` will also contain:
+
+```
+Hello, Unix World!
+```
+
+---
+
+## mv
+
+`mv` is a utility to move (rename) a file by copying its contents to a new file and deleting the original.
+
+### Compilation
+
+```bash
+gcc -o mymv mymv.c
+```
+
+### Usage
+
+```bash
+./mymv oldname.txt newname.txt
+```
+
+### Example
+
+Before running:
+
+```bash
+ls
+```
+
+```
 oldname.txt
+```
 
-$ ./mymv oldname.txt newname.txt
+After running:
 
-$ ls
-newname.txt
+```bash
+./mymv oldname.txt renamed.txt
+```
 
-## 📂 myecho
-// Compile:
-gcc myecho.c -o myecho
+Then:
 
-// Run:
-$ ./myecho Hello Unix World!
-Hello Unix World!
+```bash
+ls
+```
 
+```
+renamed.txt
+```
+
+---
+
+## myecho
+
+`myecho` prints all the arguments passed to it, separated by spaces.
+
+### Compilation
+
+```bash
+gcc -o myecho myecho.c
+```
+
+### Usage
+
+```bash
+./myecho Hello world from custom echo!
+```
+
+### Example
+
+```bash
+./myecho Hello world from custom echo!
+```
+
+Output:
+
+```
+Hello world from custom echo!
+```
+
+---
+
+## mypwd
+
+`mypwd` prints the current working directory.
+
+### Compilation
+
+```bash
+gcc -o mypwd mypwd.c
+```
+
+### Usage
+
+```bash
+./mypwd
+```
+
+### Example
+
+```bash
+./mypwd
+```
+
+Output:
+
+```
+Working directory: /home/user/projects/unix-utils
+```
+
+---
+
+Let me know if you'd like to add more utilities or include features like error handling explanations, diagrams, or usage inside scripts!
