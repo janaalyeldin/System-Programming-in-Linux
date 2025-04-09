@@ -156,6 +156,3 @@ Output:
 Working directory: /home/user/projects/unix-utils
 ```
 
----
-
-Let me know if you'd like to add more utilities or include features like error handling explanations, diagrams, or usage inside scripts!
